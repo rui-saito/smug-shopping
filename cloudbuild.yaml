@@ -1,9 +1,9 @@
 steps:
-  - name: node
-    entrypoint: npm
-    args: ["build"]
-    working_directory: backend
-  - name: node
-    entrypoint: npm
-    args: ["start"]
-    working_directory: backend
+  - name: "node"
+    entrypoint: "npm"
+    args: ["--prefix", "backend", "build"]
+    dir: "backend"
+  - name: "node"
+    entrypoint: "npm"
+    args: ["--prefix", "backend", "start"]
+    dir: "backend"
