@@ -1,16 +1,10 @@
 steps:
-  - name: "gcr.io/cloud-builders/npm"
+  - name: node
+    entrypoint: npm
     args: ["install"]
-  - name: "gcr.io/cloud-builders/npm"
-    args: ["run", "build"]
-  - name: "gcr.io/cloud-builders/gcloud"
-    args:
-      [
-        "run",
-        "deploy",
-        "smug-shopping",
-        "--image",
-        "gcr.io/$PROJECT_ID/your-image",
-        "--region",
-        "us-central1",
-      ]
+  - name: node
+    entrypoint: npm
+    args: ["build"]
+  - name: node
+    entrypoint: npm
+    args: ["run"]
