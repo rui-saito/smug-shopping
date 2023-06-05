@@ -4,4 +4,4 @@ steps:
     args: ["build"]
   - name: node
     entrypoint: npm
-    args: ["run"]
+    args: ["start"]
