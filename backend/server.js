@@ -188,3 +188,5 @@ app.delete("/delete", async (req, res) => {
 app.listen(PORT, () => {
   console.log(`I am now waiting for incoming HTTP traffic on port ${PORT}!`);
 });
+
+// "build": "npm install && npx knex migrate:latest --knexfile db/knexfile.js && npx knex seed:run --knexfile db/knexfile.js"
