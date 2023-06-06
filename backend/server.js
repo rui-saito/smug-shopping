@@ -31,6 +31,9 @@ const calculateDiffInDays = (startDay, endDay) => {
   const diffDay = Math.floor(diffTime / (1000 * 60 * 60 * 24));
   return diffDay;
 };
+app.get("/", (req, res) => {
+  res.send("Hello, World")
+})
 
 // GET /:buyingDay/:nextBuyingDay 次の買い物日までに必要な物品と個数のリストを返す
 app.get("/api/:buyingDay/:nextBuyingDay", async (req, res) => {
