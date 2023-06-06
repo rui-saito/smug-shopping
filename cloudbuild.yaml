@@ -4,7 +4,7 @@ steps:
     args: ["run", "build"]
     dir: "backend"
     env:
-      - "PROJECT_ID=<eternal-calling-388908>"
+      - "PROJECT_ID=eternal-calling-388908"
     options:
       logging: "NONE"
   - name: "node"
@@ -12,6 +12,6 @@ steps:
     args: ["start"]
     dir: "backend"
     env:
-      - "PROJECT_ID=<eternal-calling-388908>"
+      - "PROJECT_ID=eternal-calling-388908"
     options:
       logging: "NONE"
