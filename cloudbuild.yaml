@@ -5,9 +5,17 @@ steps:
     dir: "backend"
     env:
       - "PROJECT_ID=eternal-calling-388908"
+    options:
+      logging: "NONE"
+    build:
+      serviceAccount: "520269180137-compute@developer.gserviceaccount.com"
   - name: "node"
     entrypoint: "npm"
     args: ["start"]
     dir: "backend"
     env:
       - "PROJECT_ID=eternal-calling-388908"
+    options:
+      logging: "NONE"
+    build:
+      serviceAccount: "520269180137-compute@developer.gserviceaccount.com"
