@@ -6,6 +6,28 @@ const config = require("./knexfile.js")[environment];
 const knex = require("knex")(config);
 const PORT = 8080;
 
+const { Client } = require('pg');
+// "build": "npm install && npx knex migrate:latest --knexfile db/knexfile.js && npx knex seed:run --knexfile db/knexfile.js"
+
+const con = new Client({
+  host: 'localhost',
+  port: 5432,
+  database: 'your_database_name',
+  user: 'your_username',
+  password: 'your_password'
+});
+
+con.connect()
+  .then(() => {
+    console.log('Connected to the database');
+    // 他のコードやサーバーの起動など、必要な処理を実行する
+  })
+  .catch((error) => {
+    console.error('Error connecting to the database', error);
+  });
+
+
+
 app.use(express.json());
 
 app.use((req, res, next) => {
