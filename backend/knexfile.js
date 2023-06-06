@@ -1,4 +1,4 @@
-// Update with your config settings.
+// Update with your config settings.　バージョン変更できた？
 
 require("dotenv").config({
   path: "./.env",
