@@ -5,13 +5,9 @@ steps:
     dir: "backend"
     env:
       - "PROJECT_ID=eternal-calling-388908"
-    options:
-      logging: "NONE"
   - name: "node"
     entrypoint: "npm"
     args: ["start"]
     dir: "backend"
     env:
       - "PROJECT_ID=eternal-calling-388908"
-    options:
-      logging: "NONE"
