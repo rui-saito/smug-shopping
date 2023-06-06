@@ -2,8 +2,8 @@ steps:
   - name: "node"
     entrypoint: "npm"
     args: ["run", "build"]
-    dir: ["backend"]
+    dir: "backend"
   - name: "node"
     entrypoint: "npm"
     args: ["start"]
-    dir: ["backend"]
+    dir: "backend"
