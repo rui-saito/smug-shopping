@@ -188,10 +188,3 @@ app.delete("/delete", async (req, res) => {
 app.listen(PORT, () => {
   console.log(`I am now waiting for incoming HTTP traffic on port ${PORT}!`);
 });
-// - name: "node"
-// entrypoint: "npm"
-// args: ["run", "build"]
-// dir: "backend"
-// env:
-//   - "PROJECT_ID=eternal-calling-388908"
-//   - "NODE_ENV=production"
