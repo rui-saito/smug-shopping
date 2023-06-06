@@ -50,8 +50,8 @@ module.exports = {
       connection: {
         host: "35.200.74.73", // e.g. '/cloudsql/project:region:instance'
         // host: process.env.INSTANCE_UNIX_SOCKET, // e.g. '/cloudsql/project:region:instance'
-        user: process.env.DB_USER, // e.g. 'my-user'
-        password: process.env.DB_PASS, // e.g. 'my-user-password'
+        user: "postgres", // e.g. 'my-user'
+        // password: process.env.DB_PASS, // e.g. 'my-user-password'
         database: "buying_list", // e.g. 'my-database'
       },
     },
