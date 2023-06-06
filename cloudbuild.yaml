@@ -5,9 +5,11 @@ steps:
     dir: "backend"
     env:
       - "PROJECT_ID=eternal-calling-388908"
+      - "NODE_ENV=production"
   - name: "node"
     entrypoint: "npm"
     args: ["start"]
     dir: "backend"
     env:
       - "PROJECT_ID=eternal-calling-388908"
+      - "NODE_ENV=production"
