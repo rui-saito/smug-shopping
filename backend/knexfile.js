@@ -47,10 +47,12 @@ module.exports = {
   production: {
     client: "postgresql",
     connection: {
-      host: process.env.INSTANCE_UNIX_SOCKET, // 修正: IPアドレスを指定
-      database: "buying_list", // 修正: データベース名を指定
-      user: process.env.DB_USER, // 修正: ユーザー名を指定
-      // password: "password", // 修正: パスワードを指定
+      connection: {
+        user: process.env.DB_USER, // e.g. 'my-user'
+        password: process.env.DB_PASS, // e.g. 'my-user-password'
+        database: "buying_list", // e.g. 'my-database'
+        host: process.env.INSTANCE_UNIX_SOCKET, // e.g. '/cloudsql/project:region:instance'
+      },
     },
     // connection: process.env.DATABASE_URL,
     // connection: process.env.INSTANCE_CONNECTION_NAME,
