@@ -10,11 +10,11 @@ const { Client } = require('pg');
 // "build": "npm install && npx knex migrate:latest --knexfile db/knexfile.js && npx knex seed:run --knexfile db/knexfile.js"
 
 const con = new Client({
-  host: 'localhost',
+  host: '35.200.74.73',
   port: 5432,
-  database: 'your_database_name',
-  user: 'your_username',
-  password: 'your_password'
+  database: 'buying_list',
+  user: 'postgres',
+  // password: 'your_password'
 });
 
 con.connect()
