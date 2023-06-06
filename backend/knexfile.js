@@ -54,10 +54,10 @@ module.exports = {
     },
     // connection: process.env.DATABASE_URL,
     // connection: process.env.INSTANCE_CONNECTION_NAME,
-    pool: {
-      min: 2,
-      max: 10,
-    },
+    // pool: {
+    //   min: 2,
+    //   max: 10,
+    // },
     migrations: {
       tableName: "knex_migrations",
       directory: "./db/migrations",
