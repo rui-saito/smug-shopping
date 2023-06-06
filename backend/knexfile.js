@@ -46,7 +46,7 @@ module.exports = {
   production: {
     client: "postgresql",
     // connection: process.env.DATABASE_URL,
-    connection: INSTANCE_CONNECTION_NAME,
+    connection: process.env.INSTANCE_CONNECTION_NAME,
     // connection: "p520269180137-ezzhc6@gcp-sa-cloud-sql.iam.gserviceaccount.com",
     pool: {
       min: 2,
