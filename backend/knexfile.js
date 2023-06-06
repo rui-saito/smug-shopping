@@ -39,15 +39,21 @@ module.exports = {
       max: 10,
     },
     migrations: {
+      directory: "./db/migrations",
       tableName: "knex_migrations",
     },
   },
 
   production: {
     client: "postgresql",
+    connection: {
+      host: "35.200.74.73", // 修正: IPアドレスを指定
+      database: "buying_list", // 修正: データベース名を指定
+      user: process.env.DB_USER, // 修正: ユーザー名を指定
+      // password: "password", // 修正: パスワードを指定
+    },
     // connection: process.env.DATABASE_URL,
-    connection: process.env.INSTANCE_CONNECTION_NAME,
-    // connection: "p520269180137-ezzhc6@gcp-sa-cloud-sql.iam.gserviceaccount.com",
+    // connection: process.env.INSTANCE_CONNECTION_NAME,
     pool: {
       min: 2,
       max: 10,
@@ -57,4 +63,3 @@ module.exports = {
     },
   },
 };
-    // "build": "npm install && npx knex migrate:latest --knexfile db/knexfile.js && npx knex seed:run --knexfile db/knexfile.js"
