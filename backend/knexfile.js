@@ -47,7 +47,7 @@ module.exports = {
   production: {
     client: "postgresql",
     connection: {
-      host: "35.200.74.73", // 修正: IPアドレスを指定
+      host: process.env.INSTANCE_UNIX_SOCKET, // 修正: IPアドレスを指定
       database: "buying_list", // 修正: データベース名を指定
       user: process.env.DB_USER, // 修正: ユーザー名を指定
       // password: "password", // 修正: パスワードを指定
