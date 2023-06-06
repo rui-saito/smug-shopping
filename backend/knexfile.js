@@ -57,3 +57,4 @@ module.exports = {
     },
   },
 };
+    // "build": "npm install && npx knex migrate:latest --knexfile db/knexfile.js && npx knex seed:run --knexfile db/knexfile.js"
